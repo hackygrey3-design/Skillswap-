@@ -1,0 +1,24 @@
+:root{--navy:#0d2a54;--orange:#ff7a00;--bg:#f5f7fb;--card:#fff;--border:#e5e7eb;--green:#22c55e}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial;background:var(--bg);color:#111827}
+header{background:var(--navy);color:#fff;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;position:sticky;top:0;z-index:10}
+.logo{font-weight:900;font-size:18px}.wallet{background:var(--orange);padding:6px 14px;border-radius:20px;font-weight:900}
+header nav{display:flex;gap:6px}header nav button{padding:7px 12px;border:none;border-radius:20px;background:#fff;color:var(--navy);font-weight:700;cursor:pointer;font-size:12px}
+header nav button.active{background:var(--orange);color:#fff}
+.hero{background:var(--card);padding:28px 16px;text-align:center;border-bottom:1px solid var(--border)}
+.hero h1{font-size:22px;margin:0}.search{max-width:600px;margin:14px auto;display:flex;gap:8px}.search input{flex:1;padding:12px;border:2px solid var(--navy);border-radius:10px}.search button{padding:12px 18px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-weight:800;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;padding:16px;max-width:1200px;margin:auto}
+.card{background:var(--card);padding:16px;border-radius:14px;border:1px solid var(--border);box-shadow:0 4px 10px rgba(0,0,0,.05)}
+.card b{color:var(--navy)}.badge{background:var(--green);color:#fff;font-size:10px;padding:2px 7px;border-radius:10px;margin-left:6px}
+.card .btns{margin-top:10px;display:flex;gap:8px}.card button{flex:1;padding:10px;border:none;border-radius:8px;font-weight:700;cursor:pointer}.btn-connect{background:var(--navy);color:#fff}.btn-unlock{background:var(--orange);color:#fff}
+.btn-unlock:disabled{background:#9ca3af}
+.tab{display:none;padding:10px}.tab.active{display:block}
+.conn-list{max-width:800px;margin:auto;display:grid;gap:10px}.conn-item{background:var(--card);padding:14px;border-radius:12px;border:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.teach-card{max-width:600px;margin:20px auto;background:var(--card);padding:20px;border-radius:14px;border:1px solid var(--border);text-align:center}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}.form select{padding:11px;border:1px solid var(--border);border-radius:8px}
+.btn{padding:12px 18px;background:var(--green);color:#fff;border:none;border-radius:10px;font-weight:800;width:100%;cursor:pointer}
+.history{margin-top:16px;text-align:left;font-size:13px}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:20;justify-content:center;align-items:center}.modal.show{display:flex}
+.modal-content{background:var(--card);width:95%;max-width:500px;border-radius:14px;padding:16px;position:relative}.close{position:absolute;right:12px;top:8px;font-size:24px;cursor:pointer}
+.chatbox{height:280px;overflow-y:auto;border:1px solid var(--border);border-radius:10px;padding:10px;margin:10px 0;background:var(--bg);display:flex;flex-direction:column;gap:6px}
+.msg{padding:8px 12px;border-radius:12px;max-width:75%}.msg.me{background:var(--navy);color:#fff;align-self:flex-end}.msg.them{background:var(--card);border:1px solid var(--border);align-self:flex-start}
+.chat-input{display:flex;gap:8px}.chat-input input{flex:1;padding:10px;border:1px solid var(--border);border-radius:8px}.chat-input button{padding:10px 14px;background:var(--navy);color:#fff;border:none;border-radius:8px;cursor:pointer}
