@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkillSwap CI - Echange de Compétences</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">🔄 SkillSwap CI</div>
+  <div class="wallet">💰 <span id="skp">500</span> SKP</div>
+  <nav>
+    <button onclick="showTab('discover')" class="active">Découvrir</button>
+    <button onclick="showTab('connections')">Mes Connects</button>
+    <button onclick="showTab('teach')">Enseigner +250</button>
+  </nav>
+</header>
+
+<section id="discover" class="tab active">
+  <div class="hero">
+    <h1>Trouve quelqu'un qui a ce que tu veux apprendre</h1>
+    <p>Connect gratuit • Chat = 500 SKP • Enseigne pour gagner</p>
+    <div class="search">
+      <input id="q" placeholder="Je veux apprendre... ex: Marketing">
+      <button onclick="doSearch()">Rechercher</button>
+    </div>
+  </div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section id="connections" class="tab">
+  <h2>Mes Connexions</h2>
+  <div id="connList" class="conn-list"></div>
+</section>
+
+<section id="teach" class="tab">
+  <div class="teach-card">
+    <h2>🎓 Enseigne & Gagne 250 SKP</h2>
+    <p>Tu as rencontré quelqu'un? Confirme pour gagner des points.</p>
+    <div class="form">
+      <select id="taughtTo"></select>
+      <select id="skillTaught"><option>Graphics Design</option><option>Marketing</option><option>Excel</option><option>Anglais</option><option>Comptabilité</option></select>
+    </div>
+    <button class="btn" onclick="confirmTeach()">✅ On s'est vu - Gagner 250 SKP</button>
+    <small>GPS vérifié • La session doit être débloquée dans les 2h</small>
+    <div id="teachHistory" class="history"></div>
+  </div>
+</section>
+
+<div id="chatModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeChat()">&times;</span>
+    <h3 id="chatName">Chat</h3>
+    <div id="chatBox" class="chatbox"></div>
+    <div class="chat-input"><input id="chatInput" placeholder="Message..."><button onclick="sendMsg()">Envoyer</button></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
